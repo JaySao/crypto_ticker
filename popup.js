@@ -8,12 +8,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
           for(var i=0; i<5; i++){
             var row = document.getElementsByClassName("row")[i];
+            var symbol = document.createElement("h2");
             var price = document.createElement("h3");
             var change = document.createElement("h3");
-            price.innerHTML = obj[i].symbol+': $'+ obj[i].price_usd;
-            change.innerHTML ="24Hr Change:" + "(" + obj[i].percent_change_24h + "%)";
-            row.appendChild(price);
+            symbol.innerHTML = obj[i].symbol + " ("+ obj[i].name+")";
+            price.innerHTML ='$'+ obj[i].price_usd;
+            change.innerHTML ="(" + obj[i].percent_change_24h + "%)";
+            if(obj[i].percent_change_24h > 1){
+              change.style.backgroundColor="green";
+            }else{
+              change.style.backgroundColor="red";
+            }
+            row.appendChild(symbol);
             row.appendChild(change);
+            row.appendChild(price);
             console.log(obj);
           }
         }
