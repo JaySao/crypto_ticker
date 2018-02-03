@@ -15,10 +15,14 @@ body{
   background-color: #444444;
 }
 h2{
+  font-family: 'Roboto','sans-serif';
+  font-weight: 200;
   padding-left: 10px;
   display: inline-block;
 }
 h3{
+  font-family: 'Roboto','sans-serif';
+  font-weight: 200;
   border-radius: 10%;
   padding:2px;
   padding-right: 5px;
